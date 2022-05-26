@@ -26,7 +26,7 @@ const settings = {
 };
 
 try {
-  const res = await fetch("http://localhost:3001/users", settings);
+  const res = await fetch("https://tutorial-backend-test.herokuapp.com/users", settings);
   if(res.ok) {
     return res.json();
   }
@@ -39,7 +39,7 @@ try {
 
   const getUsers = async () => {
     try {
-      const res = await fetch("http://localhost:3001/users");
+      const res = await fetch("https://tutorial-backend-test.herokuapp.com/users");
       const data = await res.json();
       if(res.ok) {
         setUsersList(data);
